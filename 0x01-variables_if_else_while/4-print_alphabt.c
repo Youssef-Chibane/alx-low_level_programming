@@ -5,18 +5,18 @@
 * Description: print alphabet in lowercase except 'e' & 'q"
 * Return: 0 if exited properly
 */
-
 int main(void)
 {
-	char c;
+	char ch = 'a';
 
-	for (c = 'a'; c <= 'z'; ++c)
+	while (ch <= 'z')
 	{
-		if (c != 'q' && c != 'e')
+		if (ch != 'e' && ch != 'q')
 		{
-		putchar(c);
+			putchar(ch);
 		}
-		putchar('\n');
+		ch++;
 	}
+	putchar('\n');
 	return (0);
 }
