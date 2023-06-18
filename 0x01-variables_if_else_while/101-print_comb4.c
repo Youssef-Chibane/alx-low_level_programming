@@ -2,7 +2,7 @@
 
 /**
  * main - entry function
- * Description: program that prints all 
+ * Description: program that prints all
  * possible different combinations of three digits.
  * Return: 0 if the program runs without any errors
  */
