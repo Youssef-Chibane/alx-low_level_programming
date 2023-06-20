@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_last_digit - print the last digit of a number.
  * @x : the number to check
