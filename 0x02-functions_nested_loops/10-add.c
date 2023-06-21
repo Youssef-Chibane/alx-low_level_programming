@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * add - function that adds two integers and returns the result
  * @x : integer to add
@@ -7,7 +9,5 @@
 
 int add(int x, int y)
 {
-	int n;
-
-	n = x + y;
+	return (a + b);
 }
