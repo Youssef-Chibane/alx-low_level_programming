@@ -6,29 +6,35 @@
  * possible different combinations of three digits.
  * Return: 0 if the program runs without any errors
  */
+
 int main(void)
 {
-	int n, m, l;
+	int num1 = 0, num2, num3;
 
-	for (n = 48; n < 58; n++)
+	while (num1 <= 9)
 	{
-		for (m = 49; m < 58; m++)
+		num2 = 0;
+		while (num2 <= 9)
 		{
-			for (l = 50; l < 58; l++)
+			num3 = 0;
+			while (num3 <= 9)
 			{
-				if (l > m && m > n)
+				if (num1 < num2 && num2 < num3)
 				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
+					putchar(num1 + 48);
+					putchar(num2 + 48);
+					putchar(num3 + 48);
+					if (num1 + num2 + num3 != 24)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
+				num3++;
 			}
+			num2++;
 		}
+		num1++;
 	}
 	putchar('\n');
 	return (0);

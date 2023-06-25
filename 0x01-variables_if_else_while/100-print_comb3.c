@@ -6,25 +6,29 @@
  * different combinations of two digits
  * Return: 0 if the program runs without any errors
  */
+
 int main(void)
 {
-	int n, m;
+	int num1 = 0, num2;
 
-	for (n = 48; n <= 56; n++)
+	while (num1 <= 9)
 	{
-		for (m = 49; m <= 57; m++)
+		num2 = 0;
+		while (num2 <= 9)
 		{
-			if (m > n)
+			if (num1 < num2)
 			{
-				putchar(n);
-				putchar(m);
-				if (n != 56 || m != 57)
+				putchar(num1 + 48);
+				putchar(num2 + 48);
+				if (num1 + num2 != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
+			num2++;
 		}
+		num1++;
 	}
 	putchar('\n');
 	return (0);
