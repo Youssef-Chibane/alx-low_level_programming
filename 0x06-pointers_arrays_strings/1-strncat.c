@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-* _strcat - function that concatenates two strings.
+* *_strncat - function that concatenates two strings.
 * @dest: string to append to
 * @src: string to add
+* @n: number of bytes
 * Return: dest
 */
 
