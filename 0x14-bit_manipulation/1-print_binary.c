@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 	while (mask <= n)
 		mask <<= 1;
 
-	if (mask > n)
+	if (mask >= n)
 	mask >>= 1;
 
 	while (mask)
