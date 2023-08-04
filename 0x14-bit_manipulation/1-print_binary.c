@@ -6,30 +6,27 @@
  *
  * Return: void
  */
-
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1;
-
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
-	while (mask <= n)
-		mask <<= 1;
-
-	if (mask >= n)
-	mask >>= 1;
+	unsigned long int mask = 1UL << (64 - 1);
+	int started = 0;
 
 	while (mask)
 	{
-		if (mask & n)
-			_putchar('1');
-		else
-			_putchar('0');
+		if (n & mask)
+		{
+			putchar('1');
+			started = 1;
+		}
+		else if (started)
+		{
+			putchar('0');
+		}
+
 		mask >>= 1;
 	}
+
+	if (!started)
+		putchar('0');
 }
 
