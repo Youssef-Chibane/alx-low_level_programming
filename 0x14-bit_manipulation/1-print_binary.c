@@ -10,16 +10,17 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1;
-	int i = 0;
 
-	while (mask <= n)
+	if (n == 0)
 	{
-		mask <<= 1;
-		i++;
+		_putchar('0');
+		return;
 	}
 
-	if (i)
-		mask >>= 1;
+	while (mask <= n)
+		mask <<= 1;
+
+	mask >>= 1;
 
 	while (mask)
 	{
